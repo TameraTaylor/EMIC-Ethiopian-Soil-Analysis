@@ -1,0 +1,51 @@
+Name,Units
+X,
+ID,
+Site,
+Altitude,
+lon,
+lat,
+N,(mg N/kg)
+S_avail,(mg S/kg)
+S_total,(mg S/kg)
+P_avail,(mg P/kg)
+P_total,(mg P2O5/100 g)
+K_avail,(mg K/kg)
+K_total,(mmol/kg)
+Ca_avail,(mmol Ca/l)
+Ca_total,(mmol/kg)
+Mg_avail,(mg Mg/kg)
+Mg_total,(mmol/kg)
+Na_avail,(mg Na/kg)
+Na_total,(mmol/kg)
+pH,
+C,(%)
+organic,(%)
+C_inorganic,(%)
+Carbonated_lime,(%)
+Clay,(<2 um) (%)
+Silt, (2-50 um) (%)Silt
+Sand,(>50 um) (%)
+Clay_humus,(CEC) (mmol+/kg)
+Microbial_activity,(mg N/kg)
+C.N_ratio,
+N.delivery,(kg N/ha)
+C.S_ratio,
+S.delivery,(kg S/ha)
+C.OS.ratio,
+Ca,(%)
+Mg,(%)
+K,(%)
+Na,(%)
+Striga.count.Sorghum.count,
+Normalized_Striga_Count_Ave,
+Normalized_Striga_Count_SE,
+Seedbank_Ave,
+Seedbank_SE,
+log.Seedbank_Ave,
+log.Seedbank_SE,
+log.Infestation_Ave,
+log.Infestation_SE,
+BACTERIA_ShannonIndex,
+FUNGUS_ShannonIndex,
+Agro_Climate_type,
