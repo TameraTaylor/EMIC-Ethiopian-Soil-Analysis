@@ -360,7 +360,7 @@ body <- dashboardBody(
 
 # Put them together into a dashboardPage
 ui<- dashboardPage(skin = "purple",
-  dashboardHeader(title = "PROMISE Analysis App"),
+  dashboardHeader(title = "Analysis App"),
   sidebar,
   body)
 
