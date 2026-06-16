@@ -1,30 +1,49 @@
-#Required packages
-pacman::p_load(shiny, shinydashboard, shinythemes, shinyWidgets, #shiny app
-           reshape2, tidyr, dplyr, stringr, data.table, #data wrangling 
-           ggplot2, ggspatial, ggfortify, ggiraph, plotly, #plotting
-           stars, # spatiotemporal data handling
-           raster, # raster data handling
-           terra, # raster data handling
-           sf, # vector data handling
-           geojsonio, "mapproj", rpart.plot, rpart, sp,
-           lubridate, # dates handling
-           patchwork, # arranging figures
-           tigris, # county border
-           colorspace, # color scale
-           viridis, # arranging figures
-           corrplot, "psych", cocor,
-           broom, janitor, RColorBrewer, gridExtra,
-           pheatmap, vroom, 
-           randomForest,
-           EBImage
-)
+library(shiny)
+library(shinydashboard)
+library(shinythemes)
+library(shinyWidgets)
+library(DT)
+library(data.table)
+library(reshape2)
+library(tidyr)
+library(dplyr)
+library(stringr)
+library(ggplot2)
+library(ggspatial)
+library(ggfortify)
+library(ggiraph)
+library(ggrepel)
+library(plotly)
+library(stars)
+library(raster)
+library(terra)
+library(sf)
+library(geojsonio)
+library(mapproj)
+library(rpart.plot)
+library(rpart)
+library(sp)
+library(lubridate)
+library(patchwork)
+library(tigris) 
+library(colorspace)
+library(viridis)
+library(corrplot)
+library(psych)
+library(cocor)
+library(broom)
+library(janitor)
+library(RColorBrewer)
+library(gridExtra)
+library(pheatmap)
+library(vroom)
+library(randomForest)
+library(EBImage)
+library("Tjazi")
+library(openxlsx)
 
 
-###REQUIRED TO UPDATE APP ON SHINYAPPS,IO
-#library(rsconnect)
-#options(repos = BiocManager::repositories())
-#rsconnect::deployApp("C:/Users/small/Documents/Brady lab/Shiny App/WebHosting")
-###################
+
 
 ########################
 
@@ -76,23 +95,28 @@ MapBase<-  ggplot(data=r4) +
 #____________________
 
 
-
-
 choices <- c()
 for(i in 1:length(data)){
   if(is.numeric(data[,i]))
     choices <- c(choices, colnames(data[i]))
 }
 
-
-
-
-
-
-
+#microbe graphs
+mycolors<-c(
+  "#faf600",
+  "#f09341",
+  "#f04141",
+  "#f041aa",
+  "#c741f0",
+  "#737ffa",
+  "#41c1f0",
+  "#00fad5",
+  "#2cc946",
+  "#abfa00",
+  "#A3A3A3")
 
 #######################################RUN APP
 
-source('ui 3-31-2025.R', local = TRUE)
-source('server3-31-2025.R', local=TRUE)
+source('scripts/ui.R', local = TRUE)
+source('scripts/server.R', local=TRUE)
 shinyApp(ui, server)
